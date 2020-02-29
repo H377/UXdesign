@@ -1,0 +1,73 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+}
+.ico, .description{
+  margin-bottom: 10px;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(83, 83, 83);
+}
+h3{
+  text-align: center;
+  text-transform: uppercase;
+}
+.description{
+  text-align: center;
+}
+a{
+  padding: 5px;
+  border: 1px solid black;
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover{
+  border: none;
+  color: white;
+  background-color: black;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+.face{
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.face1{
+  transform: translateY(100px);
+  -webkit-box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.75);
+  z-index: 1;
+}
+.face2{
+  transform: translateY(-100px);
+  -webkit-box-shadow: 0px 8px 10px 6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 8px 10px 6px rgba(0,0,0,0.75);
+  box-shadow: 0px 8px 10px 6px rgba(0,0,0,0.75);
+  background-color: white;
+  display: flex;
+  opacity: 0;
+}
+.card:hover .face.face1{
+  background-color: rgb(238, 58, 88);
+  transform: translateY(0);
+}
+.card:hover .face.face2{
+  opacity: 1;
+  transform: translateY(0);
+}
